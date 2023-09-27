@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AuthorTitleTest {
-
     private static final ArrayList<Book> books = new ArrayList<>();
 
     @BeforeAll
@@ -23,9 +22,7 @@ public class AuthorTitleTest {
     @Test
     void testCompare() {
         books.sort(new AuthorTitleComparator());
-        assertEquals("Author ABC", books.get(0).getAuthor());
-        assertEquals("Book ABC", books.get(0).getTitle());
-        assertEquals(1100, books.get(0).getPrice());
-        assertEquals(120, books.get(1).getPrice());
+        assertEquals("Book BCA", books.get(1).getTitle());
+        assertEquals("Author CAB", books.get(2).getAuthor());
     }
 }

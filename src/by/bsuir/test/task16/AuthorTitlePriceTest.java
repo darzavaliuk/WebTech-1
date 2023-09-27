@@ -1,7 +1,7 @@
 package by.bsuir.test.task16;
 
 import by.bsuir.task.task12.Book;
-import by.bsuir.task.task16.BookTitleComparator;
+import by.bsuir.task.task16.AuthorTitlePriceComparator;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BookTitleTest {
+public class AuthorTitlePriceTest {
     private static final ArrayList<Book> books = new ArrayList<>();
 
     @BeforeAll
@@ -21,7 +21,7 @@ public class BookTitleTest {
 
     @Test
     void testCompare() {
-        books.sort(new BookTitleComparator());
+        books.sort(new AuthorTitlePriceComparator());
         assertEquals("Author ABC", books.get(0).getAuthor());
         assertEquals("Author CAB", books.get(2).getAuthor());
         assertEquals("Book CAB", books.get(2).getTitle());

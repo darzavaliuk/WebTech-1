@@ -7,11 +7,10 @@ import java.util.Comparator;
 public class AuthorTitleComparator implements Comparator<Book> {
     @Override
     public int compare(Book book1, Book book2) {
-        int titleComparison = book1.getTitle().compareTo(book2.getTitle());
-        if (titleComparison != 0) {
-            return titleComparison;
+        int authorComparison = book1.getAuthor().compareTo(book2.getAuthor());
+        if (authorComparison != 0) {
+            return authorComparison;
         }
-        return book1.getAuthor().compareTo(book2.getAuthor());
+        return book1.getTitle().compareTo(book2.getTitle());
     }
 }
-

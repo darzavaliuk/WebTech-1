@@ -20,7 +20,7 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return (71 * title.hashCode() + 83 * author.hashCode() + Integer.valueOf(price).hashCode() * 29) % 10287;
+        return (71 * title.hashCode() + 83 * author.hashCode() + Integer.valueOf(price).hashCode() * 29) % 131071;
     }
 
     @Override
