@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static by.bsuir.task.task8.Main.findMergeIndexes;
+import static by.bsuir.task.task8.MergeIndex.findMergeIndexes;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 public class SequenciesTest {
