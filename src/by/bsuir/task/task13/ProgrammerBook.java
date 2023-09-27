@@ -7,6 +7,7 @@ import java.util.Objects;
 public class ProgrammerBook extends Book {
     private String language;
     private int level;
+    final int prime = 89;
 
     public ProgrammerBook(String title, String author, int price, String language, int level) {
         super(title, author, price);
@@ -50,7 +51,11 @@ public class ProgrammerBook extends Book {
 
     @Override
     public int hashCode() {
-        return super.hashCode() + language.hashCode() + Integer.valueOf(level).hashCode();
+        int result = 0;
+        result = prime * result + super.hashCode();
+        result = prime * result + language.hashCode();
+        result = prime * result + Integer.valueOf(level).hashCode();
+        return result;
     }
 
     @Override

@@ -7,6 +7,7 @@ public class Book {
     private String author;
     private int price;
     private static int edition;
+    final int prime = 31;
 
     public Book(String title, String author, int price) {
         this.title = title;
@@ -57,7 +58,11 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return 37 * 11 + title.hashCode() + author.hashCode() + Integer.valueOf(price).hashCode();
+        int result = 0;
+        result = prime * result + title.hashCode();
+        result = prime * result + author.hashCode();
+        result = prime * result + Integer.valueOf(price).hashCode();
+        return result;
     }
 
     @Override

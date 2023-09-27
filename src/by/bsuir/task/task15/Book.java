@@ -8,6 +8,7 @@ public class Book implements Comparable<Book> {
     private int price;
     private int isbn;
     private static int edition;
+    final int prime = 89;
 
     public Book(String title, String author, int price, int isbn) {
         this.title = title;
@@ -74,7 +75,12 @@ public class Book implements Comparable<Book> {
 
     @Override
     public int hashCode() {
-        return 31 * 7 + title.hashCode() + author.hashCode() + Integer.valueOf(price).hashCode() + Integer.valueOf(isbn).hashCode();
+        int result = 0;
+        result = prime * result + title.hashCode();
+        result = prime * result + author.hashCode();
+        result = prime * result + Integer.valueOf(price).hashCode();
+        result = prime * result + Integer.valueOf(isbn).hashCode();
+        return result;
     }
 
     @Override
